@@ -1,5 +1,6 @@
 import Image from 'next/image'
 
+// ○  (Static)  automatically rendered as static HTML (uses no initial props)
 export default function Home() {
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24">

@@ -21,11 +21,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <header>главный Layout</header>
+        {/* <header>главный Layout</header> */}
         {/* {map} */}
         {/* {rules} */}
         {children}
-        <footer>Footer</footer>
+        {/* <footer>Footer</footer> */}
       </body>
     </html>
   )

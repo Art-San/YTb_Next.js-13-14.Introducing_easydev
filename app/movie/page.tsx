@@ -13,7 +13,7 @@ const MoviePage = async () => {
       <ul className=" max-w-md space-y-1 text-gray-500 list-disc list-inside dark:text-gray-400">
         {allFilms.result.map((film) => (
           <li key={film.uid}>
-            <Link href={`/post/${film.uid}`}>{film.properties.title}</Link>
+            <Link href={`/movie/${film.uid}`}>{film.properties.title}</Link>
           </li>
         ))}
       </ul>

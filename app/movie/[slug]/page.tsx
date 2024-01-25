@@ -1,16 +1,48 @@
-export async function generateStaticParams() {
-  const films = await fetch('https://swapi.dev/api/films').then((res) =>
-    res.json()
-  )
+import { getAllFilms } from '@/app/actions/getAllFilms'
+import { getFilm } from '@/app/actions/getFilm'
 
-  return films.results.map((film: any) => ({
-    slug: film.title.replace(/\s+/g, '-')
+interface IProps {
+  params: {
+    slug: number
+  }
+}
+
+export default async function Film({ params: { slug } }: IProps) {
+  const film = await getFilm(slug)
+
+  return (
+    <div>
+      <h1>{film.result.properties.title}</h1>
+    </div>
+  )
+}
+// λ  (Server)  server-side renders at runtime (uses getInitialProps or getServerSideProps)
+// -------------------------------------------------------
+// благодаря этой функции после билда получили такой компонент
+// ●  (SSG)     automatically generated as static HTML + JSON (uses getStaticProps)
+
+export async function generateStaticParams() {
+  const films = await getAllFilms()
+
+  return films.result.map((film) => ({
+    slug: film.uid
   }))
 }
 
-const SingleMoviePage = ({ params }: any) => {
-  console.log('SingleMoviePage params', params) // params {id: 23}
-  return <div>PostPage-ID - {JSON.stringify(params)}-</div>
-}
+//---------------------------------------------------------
+// export async function generateStaticParams() {
+//   const films = await fetch('https://swapi.dev/api/films').then((res) =>
+//     res.json()
+//   )
 
-export default SingleMoviePage
+//   return films.results.map((film: any) => ({
+//     slug: film.title.replace(/\s+/g, '-')
+//   }))
+// }
+
+// const SingleMoviePage = ({ params }: any) => {
+//   console.log('SingleMoviePage params', params) // params {id: 23}
+//   return <div>PostPage-ID - {JSON.stringify(params)}-</div>
+// }
+
+// export default SingleMoviePage

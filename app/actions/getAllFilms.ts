@@ -1,10 +1,3 @@
-export async function getFilm(id: number): Promise<FilmResponse> {
-  const films = await fetch(`https://swapi.tech/api/films/${id}`).then((res) =>
-    res.json()
-  )
-
-  return films
-}
 export async function getAllFilms(): Promise<FilmsResponse> {
   const films = await fetch('https://swapi.tech/api/films').then((res) =>
     res.json()

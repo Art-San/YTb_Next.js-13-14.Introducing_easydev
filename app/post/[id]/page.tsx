@@ -1,3 +1,22 @@
+interface IProps {
+  params: {
+    id: number
+  }
+}
+
+const FilmPage = async ({ params: { id } }: IProps) => {
+  // const film = await getFilm(id)
+
+  return (
+    <div>
+      <h1>{'ffff'}</h1>
+      {/* <h1>{film.result.properties.title}</h1> */}
+    </div>
+  )
+}
+
+export default FilmPage
+
 // interface IProps {
 //   params: {
 //     id: string
@@ -11,25 +30,3 @@
 // }
 
 // export default PostPage
-
-import { getFilm } from '@/app/actions/getAllFilms'
-
-interface IProps {
-  params: {
-    id: string
-  }
-}
-
-const FilmPage = async ({ params }: IProps) => {
-  const { id } = params
-  // console.log('params', params) // params {id: 23}
-  const film = await getFilm(+id)
-  // console.log('film ', film)
-  return (
-    <div>
-      <h1>{film.result.properties.title}</h1>
-    </div>
-  )
-}
-
-export default FilmPage
