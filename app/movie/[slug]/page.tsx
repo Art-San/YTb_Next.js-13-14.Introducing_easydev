@@ -9,7 +9,7 @@ export async function generateStaticParams() {
 }
 
 const SingleMoviePage = ({ params }: any) => {
-  console.log('params', params) // params {id: 23}
+  console.log('SingleMoviePage params', params) // params {id: 23}
   return <div>PostPage-ID - {JSON.stringify(params)}-</div>
 }
 
