@@ -14,3 +14,14 @@ export async function getAllFilms(): Promise<FilmsResponse> {
 
 //   return films
 // }
+
+// в Next.js-14 было так
+// export async function getAllFilms(): Promise<FilmsResponse> {
+//   const films = await fetch('https://swapi.tech/api/films', {
+//     // next: { revalidate: 60 } //_14_// ○  (Static)   prerendered as static content  --- предварительно визуализированный как статический контент
+//     // cache: 'no-store' //____14_// λ  (Dynamic)  server-rendered on demand using Node.js --- λ (динамический) отображается на сервере по требованию с использованием Node.js
+//     // cache: 'force-cache' //_14_// ○  (Static)   prerendered as static content  --- предварительно визуализированный как статический контент
+//   }).then((res) => res.json())
+
+//   return films
+// }

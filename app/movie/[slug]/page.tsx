@@ -20,6 +20,7 @@ export default async function Film({ params: { slug } }: IProps) {
 // -------------------------------------------------------
 // благодаря этой функции после билда получили такой компонент
 // ●  (SSG)     automatically generated as static HTML + JSON (uses getStaticProps)
+// ●  (SSG)  14-js   prerendered as static HTML (uses getStaticProps)
 
 export async function generateStaticParams() {
   const films = await getAllFilms()
