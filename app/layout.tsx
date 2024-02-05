@@ -11,11 +11,11 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
-  map,
+  modal,
   rules
 }: {
   children: React.ReactNode
-  map: React.ReactNode // @ ---- Параллельный роут
+  modal: React.ReactNode // @ ---- Параллельный роут
   rules: React.ReactNode // @ ---- Параллельный роут
 }) {
   return (
@@ -25,6 +25,7 @@ export default function RootLayout({
         {/* {map} */}
         {/* {rules} */}
         {children}
+        {modal}
         {/* <footer>Footer</footer> */}
       </body>
     </html>
