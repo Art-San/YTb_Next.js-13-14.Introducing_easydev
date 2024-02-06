@@ -102,7 +102,8 @@ export default function Modal({ children }: { children: React.ReactNode }) {
     >
       <div
         ref={wrapper}
-        className=" absolute top-1/2 left-1/2 -translate-x-1/2  -translate-y-1/2 w-[30%] sm:w-10/12 md:w-8/12"
+        className=" absolute top-1/2 left-1/2 -translate-x-1/2  -translate-y-1/2 w-[35%]"
+        // className=" absolute top-1/2 left-1/2 -translate-x-1/2  -translate-y-1/2 w-[30%] sm:w-10/12 md:w-8/12"
       >
         {children}
       </div>

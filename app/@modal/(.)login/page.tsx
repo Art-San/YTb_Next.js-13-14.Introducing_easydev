@@ -4,7 +4,8 @@ import Modal from '@/app/components/Modal'
 const LoginPage = () => {
   return (
     <Modal>
-      <div className=" flex items-center justify-center h-screen">
+      <div className=" flex items-center justify-center">
+        {/* <div className=" flex z-0 items-center justify-center h-screen"> */}
         <div className=" max-w-md w-full bg-white rounded-lg shadow-lg p-8">
           <h1 className=" text-2xl font-bold mb-4 ">Login soft navigation</h1>
           <form action="">
