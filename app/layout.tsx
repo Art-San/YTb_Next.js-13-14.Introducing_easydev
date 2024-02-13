@@ -1,6 +1,8 @@
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import './globals.css'
+import SimpleHeader from '@/components/SimpleHeader'
+import ReadingProgress from '@/components/ReadingProgress'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -24,6 +26,7 @@ export default function RootLayout({
         {/* <header>главный Layout</header> */}
         {/* {map} */}
         {/* {rules} */}
+        <SimpleHeader />
         {children}
         {modal}
         {/* <footer>Footer</footer> */}
