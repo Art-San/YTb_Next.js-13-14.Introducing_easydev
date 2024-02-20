@@ -26,9 +26,9 @@ export default function RootLayout({
         {/* <header>главный Layout</header> */}
         {/* {map} */}
         {/* {rules} */}
-        <SimpleHeader />
+        {/* <SimpleHeader /> */}
         {children}
-        {modal}
+        {/* {modal} */}
         {/* <footer>Footer</footer> */}
       </body>
     </html>
