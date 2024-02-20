@@ -16,6 +16,9 @@ const SimpleHeader = () => {
             <Link href="/quotes" className=" text-white hover:text-blue-500">
               Quotes
             </Link>
+            <Link href="/movie" className=" text-white hover:text-blue-500">
+              Movies
+            </Link>
             <Link href="/posts" className=" text-white hover:text-blue-500">
               Posts
             </Link>
