@@ -4,9 +4,9 @@ import { getAllFilms } from '../actions/getAllFilms'
 const MoviePage = async () => {
   const allFilms = await getAllFilms()
 
-  // console.log('films', allFilms)
+  console.log('films', allFilms)
   return (
-    <div className=" container mx-auto mt-4 ml-6">
+    <div className=" container mx-auto mt-24 ml-6">
       <h2 className=" mb-2 text-lg font-semibold text-gray-900 dark:text-white">
         Films list
       </h2>

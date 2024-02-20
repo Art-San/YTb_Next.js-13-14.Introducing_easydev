@@ -11,8 +11,9 @@ export default async function Film({ params: { slug } }: IProps) {
   const film = await getFilm(slug)
 
   return (
-    <div>
+    <div className="mt-20">
       <h1>{film.result.properties.title}</h1>
+      <p>{film.result.description}</p>
     </div>
   )
 }
