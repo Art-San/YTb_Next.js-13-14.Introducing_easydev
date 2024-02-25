@@ -26,10 +26,12 @@ export default function RootLayout({
         {/* <header>главный Layout</header> */}
         {/* {map} */}
         {/* {rules} */}
-        {/* <SimpleHeader /> */}
+        <SimpleHeader />
         {children}
-        {/* {modal} */}
-        {/* <footer>Footer</footer> */}
+        <footer className=" flex justify-center">
+          <h1 className=" text-2xl text-red-600">Footer</h1>
+        </footer>
+        {modal}
       </body>
     </html>
   )
